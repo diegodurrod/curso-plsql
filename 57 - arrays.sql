@@ -1,0 +1,23 @@
+SET SERVEROUTPUT ON
+DECLARE 
+    TYPE DEPARTAMENTOS IS TABLE OF
+        departments.department_name%TYPE
+    INDEX BY PLS_INTEGER;
+    
+    TYPE EMPLEADOS IS TABLE OF
+        employees%ROWTYPE
+    INDEX BY PLS_INTEGER;
+
+    DEPTS DEPARTAMENTOS;
+    EMPLES EMPLEADOS;
+    
+BEGIN
+    DEPTS(0) := 'INFORMATICA';
+    DEPTS(1) := 'RRHH';
+    DEPTS(2) := 'TEST';
+    
+    DBMS_OUTPUT.PUT_LINE(depts(0));
+    DBMS_OUTPUT.PUT_LINE(depts(1));
+    DBMS_OUTPUT.PUT_LINE(depts.last);
+
+END;

@@ -1,0 +1,13 @@
+SET SERVEROUTPUT ON
+DECLARE
+    NAME VARCHAR2(100);
+    SURNAME VARCHAR(100);
+    MANAGER_ID INT(3);
+BEGIN
+    NAME := 'Pepito';
+    SURNAME := 'Perez';
+    MANAGER_ID := 9;
+    
+    DBMS_OUTPUT.PUT_LINE('Hola '|| NAME || ' ' || SURNAME);
+    DBMS_OUTPUT.PUT_LINE('Tu ID es ' || MANAGER_ID);
+END;
